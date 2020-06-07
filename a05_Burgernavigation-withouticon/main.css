@@ -1,0 +1,38 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+:root{
+    --top: 20px;
+    --inner: 15px;
+    --translate: calc(var(--top) + var(--inner));
+}
+section.burger{
+    margin: 40px;
+    width: 30%;
+}
+/*Grundstatus*/
+section.burger div{
+    height: var(--inner);
+    width: 100%;
+    background-color: teal;
+    transition: 0.4s;
+}
+section.burger div:first-child{
+    margin: 0 0 var(--top) 0;
+}
+section.burger div:last-child{
+    margin: var(--top) 0 0 0;
+}
+/*Animierter Zustand*/
+section.burger.animated div:first-child{
+    transform: translateY(var(--translate)) rotate(45deg);
+}
+section.burger.animated div:nth-child(2){
+    width: 0%;
+    opacity: 0;
+}
+section.burger.animated div:last-child{
+    transform: translateY(calc(var(--translate) * -1)) rotate(-45deg);
+}

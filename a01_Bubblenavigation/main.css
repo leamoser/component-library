@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 1.3rem;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navheight: 100%;
+    --navwidth: 20%;
+}
+/*Nav-------------------------------*/
+section.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: var(--navwidth);
+    height: var(--navheight);
+    position: fixed;
+    left: 40px;
+}
+section.nav ul{
+    list-style: none;
+}
+section.nav ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+    transition: 0.5s;
+}
+section.nav ul a{
+    text-decoration: none;
+    color: inherit;
+}
+/*Not Active*/
+section.nav ul li::before{
+    content: "○ ";
+    font-size: 2rem;
+    padding: 0 10px 0 0;
+    transition: 0.5s;
+}
+/*Active*/
+section.nav ul li.active::before{
+    content: "● ";
+    transition: 0.5s;
+}
+section.nav ul li.active{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/*Section---------------------------*/
+main section{
+    background-color: blue;
+    padding: 40px 40px 40px calc(var(--navwidth) + 10%);
+}
+main section:nth-of-type(even){
+    background-color: cornflowerblue;
+}

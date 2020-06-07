@@ -1,0 +1,33 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+section.map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: yellow;
+}
+circle{
+    fill: blue;
+    stroke: white;
+    stroke-width: 3px;
+    transition: 0.5s;
+}
+circle.active{
+    fill: white;
+    stroke: blue;
+    transition: 0.5s;
+}
+
+div.tooltip{
+    position: absolute;
+    background-color: blueviolet;
+    padding: 3px;
+    color: white;
+}

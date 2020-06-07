@@ -1,0 +1,13 @@
+# ignored files
+
+# folders with content
+**/assets
+**/img
+
+# graphicfiles
+*.svg
+*.jpg
+*.png
+*.jpeg
+*.pdf
+*.gif

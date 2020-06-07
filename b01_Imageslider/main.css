@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+body{
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+}
+:root{
+    --arrowheight: 5px;
+    --arrowbox: 30px;
+}
+
+/*Arrows*/
+div.arrowleft{
+    left: 8%;
+}
+div.arrowright{
+    right: 8%;
+}
+div.arrowleft,
+div.arrowright{
+    cursor: pointer;
+    width: var(--arrowbox);
+    height: var(--arrowbox);
+    position: absolute;
+}
+div.arrowright div,
+div.arrowleft div{
+    height: var(--arrowheight);
+    width: 100%;
+    background-color: black;
+}
+div.arrowright div:last-child,
+div.arrowleft div:last-child{
+    transform: translateY(var(--arrowheight));
+}
+div.arrowright div:first-child,
+div.arrowleft div:first-child{
+    transform: translateY(calc(var(--arrowheight) * 2));
+}
+/*Left*/
+div.arrowleft div{
+    transform-origin: left;
+}
+div.arrowleft div:first-child{
+    transform: rotate(-45deg) translateY(calc(var(--arrowheight) + 1px));
+}
+div.arrowleft div:last-child{
+    transform: rotate(45deg) translateY(calc( var(--arrowheight) * -1 ) );
+}
+/*Right*/
+div.arrowright div{
+    transform-origin: right;
+}
+div.arrowright div:first-child{
+    transform: rotate(45deg) translateY(calc(var(--arrowheight) + 1px));
+}
+div.arrowright div:last-child{
+    transform: rotate(-45deg) translateY(calc( var(--arrowheight) * -1 ) );
+}
+
+/*Slider*/
+section.slider{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.slider img{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 80vh;
+    object-fit: contain;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.5s ease-out;
+}
+section.slider img.active{
+    transform: scale(1);
+    opacity: 1;
+}

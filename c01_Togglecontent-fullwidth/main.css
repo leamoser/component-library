@@ -1,0 +1,26 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+.toggleTitle{
+    padding: 10px;
+    cursor: pointer;
+    background-color: tan;
+}
+.toggleContent{
+    outline: 1px solid black;
+    padding: 0 10px;
+    background-color: teal;
+    transition: 0.2s;
+    overflow: hidden;
+    /*Für Animation*/
+    position: absolute;
+    z-index: -1;
+    height: 0;
+}
+.toggleContent.show{
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
