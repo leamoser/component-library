@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 0;
+    padding: 0 0;
+}
+:root{
+    --breite: 100vw;
+    --spalte: calc(100vw / 3);
+}
+h1{
+    padding: 0 0;
+    margin: 0 0;
+}
+section.boxen{
+    padding: 20px;
+    /*Grid*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-auto-flow: dense;
+    width: 100%;
+}
+div.box{
+    /*Hilfestellungen*/
+    padding: 20px;
+    color: white;
+    border: 1px dashed white;
+}
+div.eins{
+    background-color: blue;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+div.zwei{
+    background-color: orange;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+div.drei{
+    background-color: darkmagenta;
+    grid-column: span 3;
+    grid-row: span 1;
+}
+div.hoch{
+    background-color: seagreen;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+div.mega{
+    background-color: grey;
+    grid-column: span 2;
+    grid-row: span 2;
+}
