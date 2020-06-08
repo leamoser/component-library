@@ -26,26 +26,23 @@ div.arrows img{
     height: auto;
 }
 /*BOXEN*/
-section.content article.contentbox img{
-    width: 300px;
-    height: 200px;
-    object-fit: contain;
-} 
 section.content{
     height: 100vh;
     width: 100vw;
-    padding: var(--page-padding);
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 section.content article.contentbox{
-    border: 2px solid black;
-    padding: var(--page-padding);
-    overflow: hidden;
     display: none;
-    margin: 0 var(--page-padding);
+    padding: var(--page-padding);
+    width: 100%;
+}
+section.content article.contentbox img{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
 }
 section.content article.contentbox.visible{
     display: block;
