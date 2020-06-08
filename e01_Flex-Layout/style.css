@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+:root{
+    --breite: 100vw;
+    --spalte: calc(100vw / 3);
+}
+section.boxen{
+    /*Flex*/
+    display: flex;
+    flex-wrap: wrap;
+}
+div.box{
+    /*Hilfestellungen*/
+    min-height: 200px;
+    color: white;
+    border: 1px dashed white;
+    padding: 10px;
+    /*Flex*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+div.extra{
+    background-color: orangered !important;
+    width: var(--breite);
+}
+div.eins{
+    min-width: var(--spalte);
+    flex-grow: 1;
+    background-color: greenyellow;
+}
+div.zwei{
+    min-width: calc(var(--spalte)*2);
+    flex-grow: 2;
+    flex-shrink: 1;
+    background-color: gold;
+}
