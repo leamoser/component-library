@@ -1,0 +1,43 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+:root{
+    --sidegap: 20px;
+}
+/*GRUNDAUFBAU*/
+body{
+    padding: var(--sidegap);
+    display: grid;
+    grid-gap: var(--sidegap);
+    grid-template-columns: 90% 1fr;
+}
+/*Arrows*/
+section.arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*Contentboxen*/
+section.content{
+    display: grid;
+    grid-gap: var(--sidegap);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+}
+section.content article.contentbox:nth-child(even){
+    background-color: beige;
+}
+section.content article.contentbox{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: calc(var(--sidegap) / 2);
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+section.content article.contentbox.visible{
+    display: flex;
+}
