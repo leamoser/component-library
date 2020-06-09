@@ -11,7 +11,7 @@ body{
     padding: var(--sidegap);
     display: grid;
     grid-gap: var(--sidegap);
-    grid-template-columns: 90% 1fr;
+    grid-template-columns: 1fr 85% 1fr;
 }
 /*Arrows*/
 section.arrow{
@@ -20,6 +20,22 @@ section.arrow{
     justify-content: center;
     align-items: center;
 }
+
+/*Wenn am ANFANG des Sliders*/
+body.leftgone{
+    grid-template-columns: 90% 1fr;
+}
+body.leftgone section#arrowleft{
+    display: none;
+}
+/*Wenn am ENDE des Sliders*/
+body.rightgone{
+    grid-template-columns: 1fr 90%;
+}
+body.rightgone section#arrowright{
+    display: none;
+}
+
 /*Contentboxen*/
 section.content{
     display: grid;
