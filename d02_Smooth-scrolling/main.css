@@ -1,0 +1,54 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --gap: 30px;
+}
+#css-support-msg{
+    display: none;
+}
+/*Header*/
+header{
+    background-color: blue;
+    color: white;
+    width: 100vw;
+    padding: var(--gap);
+    position: fixed;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header ul li{
+    display: inline;
+}
+header a{
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: inherit;
+    opacity: 1;
+}
+header a:hover,
+header a.active{
+    opacity: 0.5;
+    border-bottom: 1px solid white;
+}
+/*Sections*/
+main section{
+    height: 100vh;
+    width: 100vw;
+    padding: var(--gap);
+    background-color: cornsilk;
+}
+main section:nth-of-type(even){
+    background-color: blanchedalmond;
+}
+main section h2{
+    padding-top: 100px;
+}
