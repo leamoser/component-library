@@ -3,6 +3,7 @@
 # folders with content
 **/assets
 **/img
+**/old
 
 # graphicfiles
 *.svg
