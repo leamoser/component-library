@@ -1,0 +1,20 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+:root{
+    --gap: 30px;
+}
+body{
+    background-color: blanchedalmond;
+}
+/*Touch Position*/
+section.infos{
+    pointer-events: none;
+    background-color: yellow;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    padding: var(--gap);
+}
