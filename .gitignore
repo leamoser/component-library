@@ -4,6 +4,7 @@
 **/assets
 **/img
 **/old
+.vscode
 
 # graphicfiles
 *.svg
