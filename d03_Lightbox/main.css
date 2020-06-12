@@ -1,0 +1,58 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --gap: 30px;
+    --tr: 0.5s;
+}
+
+/*Normal*/
+section{
+    transition: var(--tr);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: blanchedalmond;
+}
+section figure img{
+    height: 60vh;
+    width: auto;
+    object-fit: cover;
+    transition: var(--tr);
+    cursor: pointer;
+}
+section figure figcaption{
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    position: absolute;
+    bottom: var(--gap);
+    width: auto;
+}
+/*Lighbox*/
+section.lightbox{
+    background-color: black;
+}
+section.lightbox figure{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+section.lightbox figure img{
+    height: 100vh;
+    cursor: auto;
+}
+section.lightbox figure figcaption{
+    display: block;
+}
