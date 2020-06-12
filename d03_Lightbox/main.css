@@ -3,56 +3,80 @@
     padding: 0 0;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-}
 :root{
     --gap: 30px;
     --tr: 0.5s;
+    --lightboxcolor: rgb(17, 17, 17);
+    --cross: 5px;
 }
-
-/*Normal*/
-section{
-    transition: var(--tr);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
+body{
+    padding: calc(var(--gap) / 2);
     background-color: blanchedalmond;
 }
-section figure img{
-    height: 60vh;
-    width: auto;
-    object-fit: cover;
+/*Bild*/
+img{
+    padding: calc(var(--gap) / 2);
+    height: 50vh;
+    cursor: pointer;
+}
+/*Cross--------------------------------------------*/
+/*Active*/
+div.cross{
+    position: absolute;
+    top: calc(var(--gap) + calc( var(--cross) * 3) );
+    right: var(--gap);
+    z-index: 3;
+    width: calc(var(--cross) * 8);
     transition: var(--tr);
     cursor: pointer;
 }
-section figure figcaption{
-    display: none;
-    background-color: black;
-    color: white;
-    padding: 3px;
-    text-align: center;
+div.cross div{
+    height: var(--cross);
+    background-color: white;
     position: absolute;
-    bottom: var(--gap);
-    width: auto;
+    width: calc(var(--cross) * 8);
+    transition: var(--tr);
 }
-/*Lighbox*/
+div.cross div:first-child{
+    transform: rotate(-45deg);
+}
+div.cross div:last-child{
+    transform: rotate(45deg);
+}
+/*Gone*/
+div.cross.gone div{
+    transform: rotate(0deg);
+    opacity: 0;
+}
+
+/*Lightbox*/
 section.lightbox{
-    background-color: black;
-}
-section.lightbox figure{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lightboxcolor);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: lb 0.3s ease-out 0s 1 forwards;
 }
-section.lightbox figure img{
+section.lightbox img{
     height: 100vh;
-    cursor: auto;
+    width: auto;
+    padding: 0 0;
 }
-section.lightbox figure figcaption{
-    display: block;
+section.lightbox p{
+    position: absolute;
+    color: white;
+    bottom: var(--gap);
+    background-color: var(--lightboxcolor);
+    padding: 3px;
+}
+@keyframes lb{
+    from {opacity: 0;}
+    to{ opacity: 1;}
 }
