@@ -1,0 +1,28 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+:root{
+    --gap: 20px;
+}
+body{
+    overflow-y: scroll;
+}
+main{
+    padding: var(--gap);
+}
+section.slider{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+article{
+    padding: var(--gap);
+    border: 1px solid black;
+    margin: var(--gap) 0px var(--gap) var(--gap);
+    min-width: 80%;
+    height: 300px;
+}
