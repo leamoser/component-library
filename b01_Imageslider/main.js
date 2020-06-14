@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let arrow_right = document.querySelector('div.arrowright');
     let images = document.querySelectorAll('section.slider>img');
 
+    //Klick-Events
     arrow_right.addEventListener('click', () => {
         let direction = 'right';
         changeImage(images.length, direction);
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let direction = 'left';
         changeImage(images.length, direction);
     })
+    //Key-Events
     document.onkeydown = function () {
         if (window.event.keyCode == 37) {
             let direction = 'left';
@@ -20,6 +22,28 @@ document.addEventListener('DOMContentLoaded', function () {
             changeImage(images.length, direction);
         }
     }
+    //Touch-Events
+    let touch_positions = [];
+    window.addEventListener('touchmove', function (e) {
+        let startval = e.changedTouches[0].pageX;
+        touch_positions.push(startval);
+    })
+    window.addEventListener('touchend', function () {
+        let number_of_touches = touch_positions.length;
+        let first = touch_positions[0];
+        let last = touch_positions[number_of_touches - 1];
+        console.log(first, last)
+        if (first > last) {
+            let direction = 'left';
+            changeImage(images.length, direction);
+        } else {
+            let direction = 'right';
+            changeImage(images.length, direction);
+        }
+        //Clear after
+        touch_positions = []
+    })
+
 
     let changeImage = (number_of_images, direction_of_swipe) => {
         //Aktuelle Position des AKtiven Bildes rausfinden
