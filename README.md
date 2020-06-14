@@ -10,3 +10,6 @@ This chapter contains toggle-elements.
 This chapter contains all the other stuff that doesn't belong in any other section.
 ## e: Layout-Structures
 This chapter contains stuff for layouts. 
+## x: Mobile specific stuff
+This chapter contains small code-snippets for mobile developement.
+
