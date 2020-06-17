@@ -1,0 +1,34 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div.image{
+    width: 50vh;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+div.item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+div.image:hover .item img{
+    transform: scale(1.2);
+}
