@@ -1,0 +1,15 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+img{
+    position: absolute;
+    cursor: move;
+    width: 50vw;
+}
