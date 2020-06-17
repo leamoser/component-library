@@ -1,0 +1,28 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: auto;
+    height: 60vh;
+}
+/*Cursor*/
+div.cursor{
+    width: 30px;
+    height: 30px;
+    background-color: mediumslateblue;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    position: absolute;
+    z-index: 1;
+}
