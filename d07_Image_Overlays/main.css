@@ -1,0 +1,40 @@
+*{
+    padding: 0 0;
+    margin: 0 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.imagecontainer{
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+section.imagecontainer img{
+    width: 100%;
+}
+section.imagecontainer div.overlay{
+    width: 100%;
+    height: 0%;
+    font-size: 0;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+section.imagecontainer div.overlay.loaded{
+    height: 100%;
+    font-size: inherit;
+}
