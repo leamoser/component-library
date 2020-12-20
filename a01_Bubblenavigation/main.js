@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let heights = getSectionsPositions();
     //Scrollen als Event
     window.onscroll = function () {
+        console.log(pageYOffset);
         changeNavi(window.pageYOffset, heights.length);
     }
     //Sections holen
