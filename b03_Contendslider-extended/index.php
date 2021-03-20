@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contentslider extended</title>
+    <title>Component Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../_templates/reset.css">
 </head>
 
 <body class="leftgone">
@@ -53,7 +54,4 @@
     <section class="arrow" id="arrowright">
         <h1>▶</h1>
     </section>
-    <script src="main.js"></script>
-</body>
-
-</html>
+<?php require_once('../_templates/foot.php')?>
