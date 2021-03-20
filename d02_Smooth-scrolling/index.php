@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Smooth Scrolling</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-</head>
-
-<body>
+<?php require_once('../_templates/head.php')?>
     <p id="css-support-msg">This browser supports the <code>scroll-behavior</code> property</p>
     <header>
         <ul>
@@ -27,8 +16,5 @@
             <p>Here comes content.</p>
         </section>
     </main>
-    <script src="main.js"></script>
     <script src="jump.js"></script>
-</body>
-
-</html>
+<?php require_once('../_templates/foot.php')?>

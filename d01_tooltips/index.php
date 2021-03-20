@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-</head>
-
-<body>
-    <section class="map">
+<?php require_once('../_templates/head.php')?>
+<section class="map">
         <svg version="1.1" id="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
             <g id="p1">
@@ -30,7 +19,4 @@
             </g>
         </svg>
     </section>
-    <script src="main.js"></script>
-</body>
-
-</html>
+<?php require_once('../_templates/foot.php')?>
