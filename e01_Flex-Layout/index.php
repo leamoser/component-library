@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fluid Flex-Box Layout</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <section class="boxen">
+<?php require_once('../_templates/head.php')?>
+<section class="boxen">
         <div class="box eins">
             <h1>Box 1 (eins)</h1>
         </div>
@@ -51,7 +34,4 @@
             <h1>Box 11 (extra)</h1>
         </div>
     </section>
-    <script src="" async defer></script>
-</body>
-
-</html>
+<?php require_once('../_templates/foot.php')?>
