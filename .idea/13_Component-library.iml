@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/b01_Imageslider/img" />
+      <excludeFolder url="file://$MODULE_DIR$/b02_Contentslider/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/b02_Contentslider/img" />
+      <excludeFolder url="file://$MODULE_DIR$/d03_Lightbox/img" />
+      <excludeFolder url="file://$MODULE_DIR$/d03_Lightbox/old" />
+      <excludeFolder url="file://$MODULE_DIR$/d05_Pointer-changes-Image/img" />
+      <excludeFolder url="file://$MODULE_DIR$/d07_Image_Overlays/img" />
+      <excludeFolder url="file://$MODULE_DIR$/e04_Slow-Loading-Sections/img" />
+      <excludeFolder url="file://$MODULE_DIR$/.vscode" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
