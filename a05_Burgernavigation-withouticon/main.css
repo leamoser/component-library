@@ -1,38 +1,33 @@
-*{
-    margin: 0 0;
-    padding: 0 0;
-    box-sizing: border-box;
-}
 :root{
-    --top: 20px;
-    --inner: 15px;
-    --translate: calc(var(--top) + var(--inner));
+    --bu-gap: 15px;
+    --bu-height: 10px;
+    --bu-translate: calc(var(--bu-gap) + var(--bu-height));
+    --bu-translate-radius: 45deg;
 }
 section.burger{
-    margin: 40px;
-    width: 30%;
+    width: 100%;
 }
 /*Grundstatus*/
 section.burger div{
-    height: var(--inner);
+    height: var(--bu-height);
     width: 100%;
-    background-color: teal;
+    background-color: black;
     transition: 0.4s;
 }
 section.burger div:first-child{
-    margin: 0 0 var(--top) 0;
+    margin: 0 0 var(--bu-gap) 0;
 }
 section.burger div:last-child{
-    margin: var(--top) 0 0 0;
+    margin: var(--bu-gap) 0 0 0;
 }
 /*Animierter Zustand*/
 section.burger.animated div:first-child{
-    transform: translateY(var(--translate)) rotate(45deg);
+    transform: translateY(var(--bu-translate)) rotate(var(--bu-translate-radius));
 }
 section.burger.animated div:nth-child(2){
     width: 0%;
     opacity: 0;
 }
 section.burger.animated div:last-child{
-    transform: translateY(calc(var(--translate) * -1)) rotate(-45deg);
+    transform: translateY(calc(var(--bu-translate) * -1)) rotate(calc( var(--bu-translate-radius) * -1 ));
 }
