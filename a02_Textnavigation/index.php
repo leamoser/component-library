@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Burgernavigation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-</head>
-
-<body>
+<?php require_once('../_templates/head.php')?>
     <div class="burger">
         <div class="menu-toggle" id="closed">Open Menu</div>
         <div class="menu-toggle" id="open">Close Menu</div>
@@ -23,7 +12,4 @@
             <li>Navigationpunkt 5</li>
         </ul>
     </nav>
-    <script src="main.js"></script>
-</body>
-
-</html>
+<?php require_once('../_templates/foot.php')?>

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bubblenavi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-</head>
-
-<body>
+<?php require_once('../_templates/head.php')?>
     <section class="nav">
         <ul>
             <a href="#section1">
@@ -101,7 +90,4 @@
                 to look out the window at the dull weather. Drops</p>
         </section>
     </main>
-    <script src="main.js"></script>
-</body>
-
-</html>
+<?php require_once('../_templates/foot.php')?>

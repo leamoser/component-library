@@ -1,12 +1,10 @@
 body{
-    background-color: yellow;
     font-size: 2rem;
 }
-
 .menu-toggle{
     cursor: pointer;
 }
-.menu-toggle#open, 
+.menu-toggle#open,
 nav{
     display: none;
 }
