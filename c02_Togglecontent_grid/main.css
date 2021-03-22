@@ -1,14 +1,15 @@
+:root{
+    --bx-grid: 3;
+}
 body{
-    background-color: teal;
     color: white;
 }
-
-article{
+main{
     width: 100%;
     padding: 100px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(var(--bx-grid), 1fr);
     grid-auto-rows: 200px;
 }
 div.box{
@@ -19,14 +20,9 @@ div.box{
     justify-content: center;
     cursor: pointer;
 }
-div.details{
-    display: none;
-    background-color: royalblue;
+div.detailbox{
+    width: 100%;
+    height: 0%;
+    background-color: #830c23;
     transition: 0.5s;
-}
-div.details.show{
-    display: block;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    padding: 20px;
 }
