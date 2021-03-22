@@ -1,5 +1,5 @@
 <?php require_once('../_templates/head.php')?>
-<section class="burger">
+<section id="burger_toggle">
     <div></div>
     <div></div>
     <div></div>

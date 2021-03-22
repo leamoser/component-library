@@ -4,30 +4,28 @@
     --bu-translate: calc(var(--bu-gap) + var(--bu-height));
     --bu-translate-radius: 45deg;
 }
-section.burger{
+section#burger_toggle{
     width: 100%;
 }
-/*Grundstatus*/
-section.burger div{
+section#burger_toggle div{
     height: var(--bu-height);
     width: 100%;
     background-color: black;
     transition: 0.4s;
 }
-section.burger div:first-child{
+section#burger_toggle div:first-child{
     margin: 0 0 var(--bu-gap) 0;
 }
-section.burger div:last-child{
+section#burger_toggle div:last-child{
     margin: var(--bu-gap) 0 0 0;
 }
-/*Animierter Zustand*/
-section.burger.animated div:first-child{
+section#burger_toggle.animated div:first-child{
     transform: translateY(var(--bu-translate)) rotate(var(--bu-translate-radius));
 }
-section.burger.animated div:nth-child(2){
+section#burger_toggle.animated div:nth-child(2){
     width: 0%;
     opacity: 0;
 }
-section.burger.animated div:last-child{
+section#burger_toggle.animated div:last-child{
     transform: translateY(calc(var(--bu-translate) * -1)) rotate(calc( var(--bu-translate-radius) * -1 ));
 }
