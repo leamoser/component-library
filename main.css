@@ -41,3 +41,13 @@ section ul li a{
 section ul li a:hover{
     transform: translateX(-10px);
 }
+@media only screen and (max-width: 1024px) {
+    div.grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 800px) {
+    div.grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
