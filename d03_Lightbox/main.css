@@ -1,36 +1,35 @@
 :root{
-    --gap: 30px;
-    --tr: 0.5s;
-    --lightboxcolor: rgb(17, 17, 17);
-    --cross: 5px;
+    --lb-gap: 30px;
+    --lb-tr: 0.5s;
+    --lb-bgcolor: rgb(17, 17, 17);
+    --lb-crosssize: 5px;
 }
 body{
-    padding: calc(var(--gap) / 2);
-    background-color: blanchedalmond;
+    padding: calc(var(--lb-gap) / 2);
 }
 /*Bild*/
 img{
-    padding: calc(var(--gap) / 2);
-    height: 50vh;
-    cursor: pointer;
+    cursor: zoom-in;
+    padding: calc(var(--lb-gap) / 2);
+    height: 60vh;
 }
 /*Cross--------------------------------------------*/
 /*Active*/
 div.cross{
     position: absolute;
-    top: calc(var(--gap) + calc( var(--cross) * 3) );
-    right: var(--gap);
+    top: calc(var(--lb-gap) + calc( var(--lb-crosssize) * 3) );
+    right: var(--lb-gap);
     z-index: 3;
-    width: calc(var(--cross) * 8);
-    transition: var(--tr);
+    width: calc(var(--lb-crosssize) * 8);
+    transition: var(--lb-tr);
     cursor: pointer;
 }
 div.cross div{
-    height: var(--cross);
+    height: var(--lb-crosssize);
     background-color: white;
     position: absolute;
-    width: calc(var(--cross) * 8);
-    transition: var(--tr);
+    width: calc(var(--lb-crosssize) * 8);
+    transition: var(--lb-tr);
 }
 div.cross div:first-child{
     transform: rotate(-45deg);
@@ -44,11 +43,12 @@ div.cross.gone div{
     opacity: 0;
 }
 
-/*Lightbox*/
+/*Lightbox-Container-----------------*/
 section.lightbox{
+    cursor: zoom-out;
     width: 100vw;
     height: 100vh;
-    background-color: var(--lightboxcolor);
+    background-color: var(--lb-bgcolor);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -60,6 +60,7 @@ section.lightbox{
     animation: lb 0.3s ease-out 0s 1 forwards;
 }
 section.lightbox img{
+    cursor: zoom-out;
     height: 100vh;
     width: auto;
     padding: 0 0;
@@ -67,8 +68,8 @@ section.lightbox img{
 section.lightbox p{
     position: absolute;
     color: white;
-    bottom: var(--gap);
-    background-color: var(--lightboxcolor);
+    bottom: var(--lb-gap);
+    background-color: var(--lb-bgcolor);
     padding: 3px;
 }
 @keyframes lb{
