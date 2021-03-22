@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let loadOverlaySlowly = () => {
         setTimeout(() => {
             container.children[1].classList.add('loaded');
-        }, 100);
+        }, 50);
     }
     let removeOverlaySlowly = () => {
         setTimeout(() => {

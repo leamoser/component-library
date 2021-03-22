@@ -13,12 +13,12 @@ section.imagecontainer{
     position: relative;
 }
 section.imagecontainer img{
+    cursor: pointer;
     width: 100%;
 }
 section.imagecontainer div.overlay{
     width: 100%;
     height: 0%;
-    font-size: 0;
     background-color: yellow;
     position: absolute;
     top: 0;
@@ -28,8 +28,9 @@ section.imagecontainer div.overlay{
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    opacity: 0;
 }
 section.imagecontainer div.overlay.loaded{
     height: 100%;
-    font-size: inherit;
+    opacity: 1;
 }
